@@ -1,3 +1,12 @@
+#!/bin/bash
+
+set -ex
+
+# Save the current working directory in an environment variable.
+INITIAL_WORKING_DIRECTORY=$(pwd)
+
+cd "$(dirname "$0")"
+
 # Detect OS.
 case $(uname | tr '[:upper:]' '[:lower:]') in
   linux*)
@@ -18,4 +27,6 @@ case $(uname | tr '[:upper:]' '[:lower:]') in
     exit 1
     ;;
 esac
+
+cd $INITIAL_WORKING_DIRECTORY
 
