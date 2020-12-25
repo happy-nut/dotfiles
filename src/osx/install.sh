@@ -2,6 +2,16 @@
 
 set -ex
 
+ROOT_DIR=$(git rev-parse --show-toplevel)
+CURRENT_DIR="${ROOT_DIR}/src/osx"
+
+ZSH_BACKUP=~/.zshrc.backup
+VIM_BACKUP=~/.vim.backup
+
+# Delete backup files if exists.
+rm -rf "$ZSH_BACKUP"
+rm -rf "$VIM_BACKUP"
+
 # Install Homebrew.
 which -s brew
 if [[ $? != 0 ]] ; then
@@ -9,17 +19,22 @@ if [[ $? != 0 ]] ; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# Install or upgrade zsh.
-brew install zsh
-
-# Change shell to zsh.
-chsh -s /bin/zsh
-
 # Backup original .zshrc file.
-cp ~/.zshrc ~/.zshrc.backup 2>/dev/null
+cp ~/.zshrc $ZSH_BACKUP 2>/dev/null
+
+# Install zsh.
+if ! brew ls --versions zsh >/dev/null ; then
+  brew install zsh
+fi
 
 # TODO: Copy base .zshrc.
-# TODO: Copy .vim.
+
+# Copy vim configs.
+if [ -d ~/.vim ] ; then
+  cp -r  ~/.vim $VIM_BACKUP  2>/dev/null
+  rm -rf ~/.vim
+fi
+cp -r "${CURRENT_DIR}/assets/.vim" ~/.vim
 
 # Install pure zsh.
 if [ ! -d "$HOME/.zsh/pure" ] ; then
@@ -41,3 +56,13 @@ if ! brew ls --versions zsh-autosuggestions >/dev/null ; then
 fi
 
 # TODO: Install autojump.
+
+# Clean up backup files. For now, remaining backup files seems more safe.
+# TODO: Make this optional.
+# rm -rf "$ZSH_BACKUP"
+# rm -rf "$VIM_BACKUP"
+
+# Change shell to zsh.
+chsh -s /bin/zsh
+
+# Restore via backup files when this script fails.
