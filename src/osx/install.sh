@@ -30,6 +30,9 @@ fi
 # TODO: Copy base .zshrc.
 
 # Copy vim configs.
+if ! brew ls --versions vim >/dev/null ; then
+  brew install vim
+fi
 if [ -d ~/.vim ] ; then
   cp -r  ~/.vim $VIM_BACKUP  2>/dev/null
   rm -rf ~/.vim
