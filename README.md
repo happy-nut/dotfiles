@@ -6,20 +6,17 @@
 
 ## Miscellaneous Settings
 
-[Homebrew](https://brew.sh/) 설치
+1. [Homebrew](https://brew.sh/) 설치
 
-```bash
-$ brew install git vim wget
-$ mkdir -p ~/.vim && wget https://bit.ly/30arSXR -O ~/.vim/vimrc
-$ vim
-```
+2. vim (git, wget) 설치
 
-FYI: 설치될 Vim 플러그인:
+   ```bash
+   $ brew install git vim wget
+   $ mkdir -p ~/.vim && wget https://bit.ly/30arSXR -O ~/.vim/vimrc
+   $ vim
+   ```
 
-- [nerdtree](https://github.com/preservim/nerdtree)
-- [darcula](https://github.com/doums/darcula/)
-- [lightline.vim](https://github.com/itchyny/lightline.vim)
-- [typescript-vim](https://github.com/leafgarland/typescript-vim)
+3. [gitalias](https://github.com/GitAlias/gitalias#install) 설치
 
 ## Iterm2
 
