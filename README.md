@@ -10,8 +10,7 @@
 
 ```bash
 $ brew install git vim wget
-$ mkdir ~/.vim
-$ wget https://raw.githubusercontent.com/happy-nut/dotfiles/main/assets/vim/vimrc -O ~/.vim/vimrc
+$ mkdir -p ~/.vim && wget https://bit.ly/30arSXR -O ~/.vim/vimrc
 $ vim
 ```
 
@@ -28,8 +27,9 @@ FYI: 설치될 Vim 플러그인:
 
 2. [p10k](https://github.com/romkatv/powerlevel10k#homebrew) 설치
  
-    **General** > **Preferences** 에서 **Load preference from a custom folder or URL** 체크하고
-    URL 붙여넣기: `https://raw.githubusercontent.com/happy-nut/dotfiles/main/assets/iterm2/com.googlecode.iterm2.plist`
+    **General** > **Preferences** 에서 **Load preference from a custom folder or URL** 체크
+
+    `https://bit.ly/389SfkR` 복사 후 붙여넣기
 
 3. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) 설치
 
@@ -43,7 +43,7 @@ FYI: 설치될 Vim 플러그인:
 
 ## Hyper Switch
 
-[hyperswitch](https://bahoom.com/hyperswitch) 설치
+[Hyper Switch](https://bahoom.com/hyperswitch) 설치
 
 ## Magnet
 
