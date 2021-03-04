@@ -9,7 +9,7 @@
 [Homebrew](https://brew.sh/) 설치
 
 ```bash
-$ brew install git vim
+$ brew install git vim wget
 $ mkdir ~/.vim
 $ wget https://raw.githubusercontent.com/happy-nut/dotfiles/main/assets/vim/vimrc -O ~/.vim/vimrc
 $ vim
