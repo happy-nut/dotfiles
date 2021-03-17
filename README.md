@@ -1,7 +1,5 @@
 ![](https://camo.githubusercontent.com/513614220bd093281d2c27218e3720003ec0f0528cb7f78dea310981cb637cbc/687474703a2f2f646f7466696c65732e6769746875622e696f2f696d616765732f646f7466696c65732d6c6f676f2e706e67)
 
-# dotfiles
-
 제목은 Mac 개발환경 세팅 레포지토리로 하겠습니다. 근데 이제 수동을 곁들인.
 
 ## Miscellaneous Settings
@@ -45,3 +43,12 @@
 ## Magnet
 
 [Magnet](https://apps.apple.com/kr/app/magnet-%EB%A7%88%EA%B7%B8%EB%84%B7/id441258766?mt=12) 설치
+
+## Infra tools
+
+1. [K9s](https://github.com/derailed/k9s#installation) 설치
+
+   ```bash
+   $ wget https://raw.githubusercontent.com/derailed/k9s/master/skins/monokai.yml -O ~/.k9s/skin.yml 
+   ```
+
