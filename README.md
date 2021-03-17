@@ -16,6 +16,12 @@
 
 3. [gitalias](https://github.com/GitAlias/gitalias#install) 설치
 
+4. pstree 설치
+
+   ```bash
+   $ brew install pstree
+   ```
+
 ## Iterm2
 
 1. [iterm2](https://iterm2.com/) 설치
