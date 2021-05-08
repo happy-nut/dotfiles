@@ -32,7 +32,13 @@
 
     `https://bit.ly/389SfkR` 복사 후 붙여넣기
 
-3. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) 설치
+3. [Zinit](https://github.com/zdharma/zinit#option-1---automatic-installation-recommended) 설치
+   `.zshrc` 에 다음 내용을 추가.
+   ```bash
+   zinit light zdharma/fast-syntax-highlighting
+   zinit light zsh-users/zsh-autosuggestions
+   zinit light zsh-users/zsh-completions
+   ```
 
 4. [auto-jump](https://github.com/wting/autojump#os-x) 설치
 
